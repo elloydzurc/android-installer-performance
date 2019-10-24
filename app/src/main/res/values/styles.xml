@@ -1,0 +1,527 @@
+<resources>
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionButtonStyle">@style/ActionButtonStyle</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
+    </style>
+
+    <style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">24dp</item>
+        <item name="android:maxWidth">24dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="loginBody">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/main</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="loginMid">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:fillViewport">false</item>
+    </style>
+
+    <style name="loginTop">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:fillViewport">false</item>
+    </style>
+
+    <style name="loginLogo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/logo_new</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="midLogo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/mid_img</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="form">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:fillViewport">false</item>
+    </style>
+
+    <style name="textUsername">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:privateImeOptions">nm</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:hint">@string/prompt_account</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/border_gray</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="textPassword">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionUnspecified</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/border_gray</item>
+        <item name="android:hint">@string/prompt_password</item>
+        <item name="android:imeActionLabel">@string/action_sign_in_short</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="chkNT">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:checked">false</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:text">@string/non_pldt</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="textHint" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/loginText</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:theme">@style/textHintTheme</item>
+
+    </style>
+
+    <style name="textHintTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/loginText</item>
+        <item name="colorControlNormal">@color/loginText</item>
+        <item name="colorControlActivated">@color/loginText</item>
+        <item name="android:textColorHint">@color/loginText</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <style name="loginButton" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/action_sign_in</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">#096b90</item>
+        <item name="android:textColor">@color/placeHolder</item>
+    </style>
+
+    <style name="appName">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textScaleX">1.2</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="loginText" parent="appName">
+        <item name="android:textColor">@color/loginHeadText</item>
+        <item name="android:text">@string/app_name_login</item>
+    </style>
+
+    <style name="groupView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+    <style name="groupHeader">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/colorText</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">0</item>
+        <item name="android:textScaleX">1.4</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="groupIndicator">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:shadowColor">#eee</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="zoneListView">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">3dp</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:groupIndicator">@null</item>
+    </style>
+
+    <style name="customExpList">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">3dp</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:groupIndicator">@null</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="subHeader">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+    </style>
+
+    <style name="subHeaderText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="listPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:drawable/dialog_holo_light_frame</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
+
+    <style name="panelHeadName">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="panelHeadIcon">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="listPanelHead">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/border_bottom</item>
+    </style>
+
+    <style name="listPanelContainer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:background">#fff</item>
+    </style>
+
+    <style name="mapChartPanel" parent="listPanelContainer">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="listPanelData">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="listPanelDataValue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="listPanelIcon" parent="listPanelData">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_height">35dp</item>
+    </style>
+
+    <style name="listPanelLegend">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="listPanelOpenIcon" parent="listPanelIcon">
+        <item name="android:text">@string/ic_open</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="listPanelDisIcon" parent="listPanelIcon">
+        <item name="android:text">@string/ic_dis</item>
+        <item name="android:textColor">@color/dispatched</item>
+    </style>
+
+    <style name="listPanelCompleteIcon" parent="listPanelIcon">
+        <item name="android:text">@string/ic_closed</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="listPanelRsoIcon" parent="listPanelIcon">
+        <item name="android:text">@string/ic_rso</item>
+        <item name="android:textColor">@color/colorError</item>
+    </style>
+
+    <style name="listPanelAckIcon" parent="listPanelIcon">
+        <item name="android:text">@string/ic_ack</item>
+        <item name="android:textColor">@color/colorTertiary</item>
+    </style>
+
+    <style name="listPanelDataLabel" parent="listPanelDataValue">
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/colorLabel</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="listPanelActionIcon" parent="listPanelDataValue">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="chartAction">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@color/colorPrimaryLight</item>
+    </style>
+
+    <style name="chartActionDefault" parent="chartAction">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="chartControlPanel" parent="chartAction">
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="listPanelActionList" parent="listPanelActionIcon">
+        <item name="android:background">@drawable/border_right_gradient</item>
+    </style>
+
+    <style name="chartPanel" parent="listPanelContainer">
+        <item name="android:layout_height">350dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="progress">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:background">@android:drawable/dialog_holo_light_frame</item>
+    </style>
+
+    <style name="progressBar">
+        <item name="android:layout_height">17dp</item>
+        <item name="android:layout_width">17dp</item>
+    </style>
+
+    <style name="progressText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">@string/loading</item>
+    </style>
+
+    <style name="locatingText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:text">@string/async_status</item>
+    </style>
+
+    <style name="missingBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:text">@string/ic_missing</item>
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="progressHeaderContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="subProgressHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="progressBarHeader">
+        <item name="android:layout_width">17dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:background">@color/light_gray</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_circular</item>
+    </style>
+
+    <style name="subProgressBarHeader" parent="progressBarHeader">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="map">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">350dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="ratingBar" parent="@android:style/Widget.DeviceDefault.Light.RatingBar.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">0.5</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:progressBackgroundTint">#FFF</item>
+        <item name="android:progressTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="mapInfoText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+    </style>
+
+    <style name="mapMissingInfoText" parent="mapInfoText">
+        <item name="android:paddingLeft">7dp</item>
+    </style>
+
+    <style name="mapInfoHeader" parent="mapInfoText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="mapMissingInfoHeader" parent="mapInfoHeader">
+    </style>
+
+    <style name="mapMissingInfoHeaderClose" parent="mapInfoHeader">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:gravity">right</item>
+        <item name="android:text">@string/ic_shut</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="mapMissingInfoHeaderText" parent="mapInfoHeader">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/missing</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="mapDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:layout_width">400dp</item>
+        <item name="android:layout_height">500dp</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="versionDialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

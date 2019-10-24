@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:id="@+id/groupView"
+         style="@style/groupView">
+
+        <TextView
+            style="@style/groupHeader"
+            app:layout_widthPercent="90%"
+            android:id="@+id/header"/>
+
+        <TextView
+            style="@style/groupIndicator"
+            app:layout_widthPercent="10%"
+            android:layout_toRightOf="@id/header"
+            android:id="@+id/indicator" />
+
+        <android.support.percent.PercentRelativeLayout
+            style="@style/progressHeaderContainer"
+            app:layout_widthPercent="10%"
+            android:id="@+id/progress">
+
+            <ProgressBar style="@style/progressBarHeader" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        app:layout_widthPercent="100%"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingTop="10dp"
+        android:id="@+id/legendView"
+        android:visibility="gone"
+        android:layout_below="@id/groupView"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            style="@style/listPanelLegend"
+            app:layout_widthPercent="100%"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold|italic"
+            android:text="Legend"
+            android:id="@+id/legend" />
+
+        <TextView
+            style="@style/listPanelOpenIcon"
+            app:layout_widthPercent="20%"
+            android:textSize="10sp"
+            android:id="@+id/assgn"
+            android:layout_below="@id/legend" />
+
+        <TextView
+            style="@style/listPanelDisIcon"
+            app:layout_widthPercent="20%"
+            android:id="@+id/dis"
+            android:textSize="10sp"
+            android:layout_below="@id/legend"
+            android:layout_toRightOf="@id/assgn"/>
+
+        <TextView
+            style="@style/listPanelAckIcon"
+            app:layout_widthPercent="20%"
+            android:textSize="10sp"
+            android:id="@+id/ack"
+            android:layout_below="@id/legend"
+            android:layout_toRightOf="@id/dis"/>
+
+        <TextView
+            style="@style/listPanelCompleteIcon"
+            app:layout_widthPercent="20%"
+            android:id="@+id/cls"
+            android:textSize="10sp"
+            android:layout_below="@id/legend"
+            android:layout_toRightOf="@id/ack"/>
+
+        <TextView
+            style="@style/listPanelRsoIcon"
+            app:layout_widthPercent="20%"
+            android:id="@+id/rso2"
+            android:textSize="10sp"
+            android:layout_below="@id/legend"
+            android:layout_toRightOf="@id/cls"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

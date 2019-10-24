@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/listPanel">
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/listPanelHead"
+        app:layout_widthPercent="100%"
+        android:id="@+id/panelHead">
+
+        <TextView
+            style="@style/panelHeadName"
+            app:layout_widthPercent="48%"
+            android:id="@+id/headerName" />
+
+        <LinearLayout
+            app:layout_widthPercent="28%"
+            android:layout_toRightOf="@id/headerName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/border_left"
+            android:id="@+id/ratingBarContainer">
+
+            <RatingBar
+                style="@style/ratingBar"
+                android:id="@+id/ratingBar" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/panelHeadIcon"
+            app:layout_widthPercent="12%"
+            android:layout_toRightOf="@id/ratingBarContainer"
+            android:text="@string/ic_performance"
+            android:id="@+id/headerPerformance"
+            android:background="@drawable/border_left" />
+
+        <TextView
+            style="@style/panelHeadIcon"
+            app:layout_widthPercent="12%"
+            android:layout_toRightOf="@id/headerPerformance"
+            android:text="@string/ic_map"
+            android:id="@+id/headerLocation"
+            android:background="@drawable/border_left" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <include android:id="@+id/fragmentData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panelHead"
+        layout="@layout/fragment_data" />
+
+</android.support.percent.PercentRelativeLayout>

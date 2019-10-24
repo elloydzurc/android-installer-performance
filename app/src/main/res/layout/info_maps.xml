@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxWidth="50dp">
+
+        <TextView
+            style="@style/mapInfoHeader"
+            android:id="@+id/so" />
+
+        <TextView
+            style="@style/mapInfoText"
+            android:id="@+id/serviceType"
+            android:layout_below="@+id/so" />
+
+        <TextView
+            style="@style/mapInfoText"
+            android:id="@+id/orderType"
+            android:layout_below="@+id/serviceType"/>
+
+        <TextView
+            style="@style/mapInfoText"
+            android:id="@+id/neType"
+            android:layout_below="@+id/orderType" />
+
+        <TextView
+            style="@style/mapInfoText"
+            android:id="@+id/status"
+            android:layout_below="@+id/neType" />
+
+        <TextView
+            style="@style/mapInfoText"
+            android:id="@+id/address"
+            android:layout_below="@+id/status" />
+
+</RelativeLayout>

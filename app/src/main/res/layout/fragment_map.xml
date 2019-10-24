@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/map">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <LinearLayout style="@style/progress" android:id="@+id/progress">
+        <ProgressBar style="@style/progressBar" />
+        <TextView style="@style/locatingText" android:id="@+id/mapStatus" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/missingBtn"
+        android:id="@+id/missingBtn" />
+
+    <ImageView
+        android:id="@+id/transparent_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@android:color/transparent" />
+
+</RelativeLayout>
+

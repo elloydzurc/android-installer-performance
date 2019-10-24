@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#64B5F6</color>
+    <color name="colorAccent">#34a853</color>
+    <color name="colorError">#ea4335</color>
+    <color name="colorText">#555</color>
+    <color name="colorLabel">#555</color>
+    <color name="colorSecondary">#f44336</color>
+    <color name="colorTertiary">#FF5722</color>
+    <color name="colorPrimaryLight">#EEEEEE</color>
+    <color name="placeHolder">@android:color/white</color>
+    <color name="active_icon">#FFCDD2</color>
+    <color name="inactive_icon">#E57373</color>
+    <color name="dispatched">#673AB7</color>
+    <color name="loginText">#aaa</color>
+    <color name="loginHeadText">#475771</color>
+
+    <color name="all">@color/colorTertiary</color>
+    <color name="open">@color/colorPrimary</color>
+    <color name="closed">@color/colorAccent</color>
+    <color name="rso">@color/colorError</color>
+    <color name="light_gray">#ddd</color>
+    <color name="dark_gray">#aaa</color>
+    <color name="textbox_border">#777</color>
+</resources>

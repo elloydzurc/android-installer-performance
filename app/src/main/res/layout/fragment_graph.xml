@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/chartControlPanel"
+    app:layout_widthPercent="100%"
+    android:id="@+id/chartBody"
+    android:layout_height="350dp"
+    android:layout_width="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/chartControlPanel"
+        app:layout_widthPercent="100%"
+        android:id="@+id/chartDataControl"
+        android:visibility="invisible">
+
+        <TextView
+            style="@style/chartActionDefault"
+            app:layout_widthPercent="23%"
+            android:text="@string/ic_all"
+            android:id="@+id/chartAll" />
+
+        <TextView
+            style="@style/chartAction"
+            app:layout_widthPercent="25%"
+            android:layout_toRightOf="@id/chartAll"
+            android:text="@string/ic_closed"
+            android:id="@+id/chartClosed" />
+
+        <TextView
+            style="@style/chartAction"
+            app:layout_widthPercent="25%"
+            android:layout_toRightOf="@id/chartClosed"
+            android:text="@string/ic_rso"
+            android:id="@+id/chartRso" />
+
+        <Spinner
+            app:layout_widthPercent="27%"
+            android:id="@+id/changeGraph"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/chartRso"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/chart_type" android:visibility="gone" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/chartPanel"
+        app:layout_widthPercent="100%"
+        android:layout_below="@id/chartDataControl"
+        android:id="@+id/chartPanel">
+
+        <com.github.mikephil.charting.charts.RadarChart
+            android:id="@+id/radarChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            style="@style/progress"
+            android:id="@+id/progress">
+
+            <ProgressBar style="@style/progressBar" />
+
+            <TextView style="@style/progressText" />
+
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:background="#ffffffff">
+
+    <TextView
+        style="@style/mapMissingInfoHeaderText"
+        android:id="@+id/dialogHeaderText" />
+
+    <TextView
+        style="@style/mapMissingInfoHeaderClose"
+        android:id="@+id/dialogHeaderClose" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@id/dialogHeaderText"
+        android:id="@+id/dialogBodyScroll">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:id="@+id/dialogBody"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

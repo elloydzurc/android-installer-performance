@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp" >
+
+    <TextView
+        style="@style/groupHeader"
+        app:layout_widthPercent="100%"
+        android:id="@+id/header"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:id="@+id/base_table"
+        android:visibility="visible">
+    </TableLayout>
+
+</android.support.percent.PercentRelativeLayout>

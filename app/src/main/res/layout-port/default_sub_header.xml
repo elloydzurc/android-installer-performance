@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/subHeader">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_widthPercent="7%"
+            android:text="@string/expand"
+            android:id="@+id/headerIcon"/>
+
+        <TextView
+            style="@style/subHeaderText"
+            app:layout_widthPercent="83%"
+            android:layout_toRightOf="@id/headerIcon"
+            android:id="@+id/header"/>
+
+        <android.support.percent.PercentRelativeLayout
+            style="@style/subProgressHeader"
+            app:layout_widthPercent="10%"
+            android:layout_toRightOf="@id/header"
+            android:id="@+id/progress">
+
+            <ProgressBar style="@style/subProgressBarHeader" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panelHead"
+    tools:context=".core.Login"
+    style="@style/loginBody">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            style="@style/loginTop"
+            android:id="@+id/top"
+            app:layout_heightPercent="40%">
+
+            <ImageView
+                style="@style/loginLogo"
+                android:id="@+id/pldtLogo" />
+
+            <TextView
+                style="@style/loginText"
+                android:layout_below="@id/pldtLogo"
+                android:id="@+id/appname" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/loginMid"
+            android:layout_below="@id/top"
+            android:id="@+id/mid"
+            app:layout_heightPercent="23%">
+
+            <ImageView
+                style="@style/midLogo"
+                android:id="@+id/pldtMidLogo" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/form"
+            android:layout_below="@id/mid"
+            app:layout_heightPercent="37%"
+            android:id="@+id/bot">
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/textHint"
+                android:id="@+id/emailWidget"
+                android:layout_gravity="center_horizontal">
+
+                <EditText
+                    style="@style/textUsername"
+                    android:inputType="textNoSuggestions"
+                    android:id="@+id/email"
+                    android:nextFocusUp="@id/email"
+                    android:nextFocusLeft="@id/email"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/textHint"
+                android:layout_below="@+id/emailWidget"
+                android:id="@+id/passwordWidget">
+
+                <EditText
+                    style="@style/textPassword"
+                    android:imeActionId="@+id/login"
+                    android:imeOptions="actionDone"
+                    android:id="@+id/password"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <CheckBox
+                style="@style/chkNT"
+                android:id="@+id/isNT" />
+
+            <Button
+                style="@style/loginButton"
+                android:id="@+id/email_sign_in_button"
+                android:layout_below="@id/passwordWidget" />
+
+        </RelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</LinearLayout>
